@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #8460ed, #ff1252);
+}
+
+body .menuContainer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .menuContainer .toggleBtn {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  z-index: 10000;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+  font-size: 2rem;
+  -webkit-transition: -webkit-transform 1.12s;
+  transition: -webkit-transform 1.12s;
+  transition: transform 1.12s;
+  transition: transform 1.12s, -webkit-transform 1.12s;
+  color: #8460ed;
+}
+
+body .menuContainer li {
+  position: absolute;
+  list-style: none;
+  -webkit-transform-origin: 100px;
+          transform-origin: 100px;
+  left: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: calc(0.1s * var(--i));
+          transition-delay: calc(0.1s * var(--i));
+  -webkit-transform: rotate(0deg) translateX(80px);
+          transform: rotate(0deg) translateX(80px);
+}
+
+body .menuContainer li a {
+  text-decoration: none;
+  font-weight: 400;
+  color: #8460ed;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-transform: rotate(calc(360deg / -8 * var(--i)));
+          transform: rotate(calc(360deg / -8 * var(--i)));
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+}
+
+body .menuContainer li a:hover {
+  color: #ff1252;
+}
+
+body .active .toggleBtn {
+  -webkit-transform: rotate(315deg);
+          transform: rotate(315deg);
+  color: #ff1252;
+}
+
+body .active li {
+  -webkit-transform: rotate(calc(360deg / 8 * var(--i)));
+          transform: rotate(calc(360deg / 8 * var(--i)));
+}
+/*# sourceMappingURL=main.css.map */
